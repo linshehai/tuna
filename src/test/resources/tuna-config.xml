@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+    <dataSource
+    username="root" password="root"
+    url="jdbc:mysql://localhost:3306/test?serverTimezone=UTC&amp;useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false"
+    driverClass="com.mysql.cj.jdbc.Driver"
+    dataSourceType="com.alibaba.druid.pool.DruidDataSource"
+    />
+
+    <resource location="/MenuMapper.xml"/>
+</config>
