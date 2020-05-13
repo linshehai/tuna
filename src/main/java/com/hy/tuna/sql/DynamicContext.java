@@ -19,6 +19,9 @@ public class DynamicContext implements Context {
 
     private List<ParameterMapping> parameterMappings;
 
+    public DynamicContext(){
+
+    }
     public DynamicContext(Configuration configuration,Object parameterObject) {
         this.configuration = configuration;
         this.parameterObject = parameterObject;
@@ -55,6 +58,12 @@ public class DynamicContext implements Context {
     @Override
     public Configuration getConfiguration() {
         return configuration;
+    }
+
+    @Override
+    public Context replace(int start,int end,String str) {
+        this.sqlBuilder.replace(start,end,str);
+        return this;
     }
 
 }

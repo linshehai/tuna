@@ -15,6 +15,7 @@ public class MenuMapperTest extends TestBase {
         MenuMapper menuMapper = session.getTunaMapper(MenuMapper.class);
         Menu criteria = new Menu();
         criteria.setId("123");
+        criteria.setName("menu1");
         Menu menu = menuMapper.queryById(criteria);
         assert menu.getId().equals("123");
     }

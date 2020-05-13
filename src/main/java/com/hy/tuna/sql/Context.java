@@ -18,4 +18,7 @@ public interface Context {
     String getSql();
 
     Configuration getConfiguration();
+
+    Context replace(int start,int end,String str);
+
 }

@@ -8,13 +8,15 @@
         <result column="id" property="id" javaType="String"/>
     </resultMap>
     <select id="queryById" resultMap="baseMap1">
-        select * from menu where
-        <if test="name!=null">
-            and name=#{name}
-        </if>
-        <if test="id!=null">
-            and id=#{id}
-        </if>
+        select * from menu where 1=1
+        <where>
+            <if test="name!=null">
+                and name=#{name}
+            </if>
+            <if test="id!=null">
+                and id=#{id}
+            </if>
+        </where>
         order by id
     </select>
 </mapper>
